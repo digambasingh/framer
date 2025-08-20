@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Home Page</title>
+  <!-- Correct way to load CSS in Express with static files -->
+  <link rel="stylesheet" href="/style/home.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  <div class="logo">🌾 FarmerConnect</div>
+  <nav>
+    <a href="/home">Home</a>
+    <a href="#stories">Stories</a>
+    <a href="#market">Market</a>
+    <a href="#contact">Contact</a>
+    <% if (user) { %>
+      <a href="/logout" class="logout-btn">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    <% } %>
+
+  </nav>
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Farmers, Growing Together 🌱</h1>
+      <p>Discover inspiring farmer stories and explore how technology is shaping agriculture.</p>
+      <button>Explore More</button>
+    </div>
+  </section>
+
+  <!-- Farmer Stories -->
+  <section class="stories" id="stories">
+    <h2>Farmer Success Stories</h2>
+    <div class="story-cards">
+
+      <div class="story-card">
+        <img src="https://ichef.bbci.co.uk/news/2048/cpsprodpb/910A/production/_106203173_farmer1.jpg" alt="Farmer 1">
+        <h3>Ramesh Kumar</h3>
+        <p>Ramesh used organic farming techniques and increased his yield by 40%.</p>
+      </div>
+
+      <div class="story-card">
+        <img src="https://static.investindia.gov.in/s3fs-public/2020-04/shutterstock_1116673256%20%281%29.jpg" alt="Farmer 2">
+        <h3>Mohammed Ali</h3>
+        <p>Anita adopted smart irrigation and reduced water usage by 30%.</p>
+      </div>
+    
+      <div class="story-card">
+        <img src="https://as2.ftcdn.net/v2/jpg/04/92/75/07/1000_F_492750742_CHc6ApxRFfABw6Wu8pcS2FK9Ma3rJcyu.jpg" alt="Farmer 3">
+        <h3>Anita Sharma</h3>
+        <p>Ali used modern techniques and doubled his income in 2 years.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 2025 FarmerConnect. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms</a> | 
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

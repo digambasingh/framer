@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Login Form</title>
+  <!-- Correct path for static CSS -->
+  <link rel="stylesheet" href="/style/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <form action="http://localhost:5000/login" method="POST">
+      <div class="input-field">
+        <input type="email" name="email" placeholder="Enter Email" required>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" placeholder="Enter Password" required>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <div class="links">
+        <p>Forgot Password? <a href="#">Click here</a></p>
+        <p>Don't have an account? <a href="/signup">Sign up</a></p>
+      </div>
+    </form>
+  </div>
+  <% if (error) { %>
+    <script>
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "<%= error %>"
+      });
+    </script>
+  <% } %>
+
+</body>
+</html>
