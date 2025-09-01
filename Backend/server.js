@@ -28,9 +28,11 @@ const cors = require("cors");
 app.use(cors());
 
 // database connection---------------
-// const url = 'mongodb://127.0.0.1:27017/';
-// const database = 'farmer';
-mongoose.connect(process.env.MONGODB_URI)
+const url = 'mongodb://127.0.0.1:27017/';
+const database = 'farmer';
+mongoose.connect(url,{
+    dbName:database
+})
 .then(()=>{
     console.log("successfully connected!");
 })
