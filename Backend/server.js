@@ -141,3 +141,5 @@ app.listen(PORT,()=>{
 // app.listen(5000, "0.0.0.0", () => console.log("Server running on 0.0.0.0:5000"));
 
 // http://192.168.218.1:5000/home
+
+module.exports = app;
